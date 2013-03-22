@@ -102,5 +102,18 @@ namespace Eto.Platform.GtkSharp
 			if (!string.IsNullOrEmpty(Control.Text))
 				Control.SelectRegion(0, Control.Text.Length);
 		}
+
+		public void Select (int start, int length)
+		{
+			Control.GrabFocus ();
+			if (!string.IsNullOrEmpty(Control.Text)) {
+
+				int end = start + length;
+				if (end > Control.Text.Length)
+					end = Control.Text.Length;
+
+				Control.SelectRegion (start, end);
+			}
+		}
 	}
 }

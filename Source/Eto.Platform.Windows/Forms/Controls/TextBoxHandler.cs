@@ -58,5 +58,11 @@ namespace Eto.Platform.Windows
 			this.Control.Focus ();
 			this.Control.SelectAll ();
 		}
+
+		public void Select (int start, int length)
+		{
+			this.Control.Focus ();
+			this.Control.Select (start, length);
+		}
 	}
 }

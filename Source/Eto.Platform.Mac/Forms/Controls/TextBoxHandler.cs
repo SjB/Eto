@@ -130,5 +130,10 @@ namespace Eto.Platform.Mac.Forms.Controls
 		{
 			Control.SelectText (Control);
 		}
+
+		public void Select (int start, int length)
+		{
+			throw new NotSupportedException ("TextBox.Select method not supported.");
+		}
 	}
 }

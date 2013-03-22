@@ -11,6 +11,8 @@ namespace Eto.Forms
 		
 		void SelectAll();
 
+		void Select(int start, int length);
+
 		string PlaceholderText { get; set; }
 	}
 	
@@ -50,6 +52,11 @@ namespace Eto.Forms
 		public void SelectAll()
 		{
 			Handler.SelectAll();
+		}
+
+		public void Select (int start, int length)
+		{
+			Handler.Select(start, length);
 		}
 	}
 }

@@ -70,5 +70,11 @@ namespace Eto.Platform.Wpf.Forms.Controls
 			Control.Focus ();
 			Control.SelectAll ();
 		}
+
+		public void Select (int start, int length)
+		{
+			Control.Focus ();
+			Control.Select (start, length);
+		}
     }
 }
